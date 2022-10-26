@@ -19,4 +19,9 @@ require 'rails_helper'
     expect(author.first_name).to eq('Alan')
   end
 
+  it "Author #name should return the full name" do
+    author = Author.new(first_name: 'Alan', last_name: 'Turing', homepage: 'http://wikipedia.org/Alan_Turing')
+    expect(author.first_name + " " + author.last_name).to eq('Alan Turing')
+  end
+
  end
