@@ -24,4 +24,13 @@ require 'rails_helper'
     expect(author.first_name + " " + author.last_name).to eq('Alan Turing')
   end
 
+  it "New author page should save the author" do
+    author = Author.new(first_name: 'Alan', last_name: 'Turing', homepage: 'http://wikipedia.org/Alan_Turing')
+    visit new_author_path
+    page.fill_in 'author[first_name]', with: author.first_name
+    page.fill_in 'author[last_name]', with: author.last_name
+    page.fill_in 'author[homepage]', with: author.homepage
+    find('input[type="submit"]').click
+  end
+
  end

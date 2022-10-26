@@ -1,0 +1,8 @@
+<h1> All Authors </h1>
+
+<% @authors.each do |author| %>
+    <p>
+        <%= link_to author.first_name, author %>
+        <%= author.homepage %>
+    </p>
+    <% end %>
