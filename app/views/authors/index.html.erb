@@ -1,10 +1,18 @@
 <h1> All Authors </h1>
 
-<% @authors.each do |author| %>
-    <p>
-        <%= author.id %>
-        <%= link_to author.name, author %>
-        <%= link_to author.homepage, author.homepage %>
-    </p>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Homepage</th>
+  </tr>
+  <% @authors.each do |author| %>
+    <tr>
+    <td> <%= author.id %></td>
+    <td><%= link_to author.name, author %></td>
+    <td><%= link_to author.homepage, author.homepage %></td>
+    </tr>
 <% end %>
+</table>
     <%= link_to 'New Author', new_author_path %>
