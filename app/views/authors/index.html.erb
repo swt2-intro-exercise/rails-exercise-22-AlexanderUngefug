@@ -3,7 +3,8 @@
 <% @authors.each do |author| %>
     <p>
         <%= author.id %>
-        <%= link_to author.first_name, author %>
-        <%= author.homepage %>
+        <%= link_to author.name, author %>
+        <%= link_to author.homepage, author.homepage %>
     </p>
-    <% end %>
+<% end %>
+    <%= link_to 'New Author', new_author_path %>
