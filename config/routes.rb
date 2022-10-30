@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   resources :authors
   post '/authors/new' => 'authors#create'
+  get '/authors/:id/edit' => 'authors#edit'
+  patch '/authors/:id' => 'authors#update'
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   
