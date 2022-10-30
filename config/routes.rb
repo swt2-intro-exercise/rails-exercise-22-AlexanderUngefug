@@ -4,12 +4,13 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   # You can have the root of your site routed with "root"
-  root 'home#index'
+  root 'authors#index'
 
   resources :authors
   post '/authors/new' => 'authors#create'
   get '/authors/:id/edit' => 'authors#edit'
   patch '/authors/:id' => 'authors#update'
+
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   
