@@ -2,6 +2,7 @@
 
 <% @authors.each do |author| %>
     <p>
+        <%= author.id %>
         <%= link_to author.first_name, author %>
         <%= author.homepage %>
     </p>
