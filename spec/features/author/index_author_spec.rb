@@ -11,6 +11,11 @@ require 'rails_helper'
     visit authors_path
     expect(page).to have_link 'New', href: new_author_path 
   end
+
+#   it "Link to Edit author" do    
+#     visit authors_path
+#     expect(page).to have_link 'Edit', href: edit_author_path(??)
+#   end
   
 
  end
