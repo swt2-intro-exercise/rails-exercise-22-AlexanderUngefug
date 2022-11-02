@@ -7,4 +7,8 @@ class Author < ApplicationRecord
     validates :last_name, presence: true, 
                           length: { minimum: 2 }, 
                           format: { with: /\A[a-zA-Z]+\z/, message: "only allows letters" }
+
+    def count
+        Author.all.length
+    end
 end
