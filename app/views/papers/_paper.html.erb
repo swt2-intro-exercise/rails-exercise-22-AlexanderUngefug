@@ -14,6 +14,13 @@
     <%= paper.year %>
   </p>
 
+  <p>
+  <strong>Author:</strong>
+  <% paper.authors.each do |author| %> 
+    <%= link_to author.name, author_path(author) %>
+  <% end %>
+</p>
+
   <%= link_to 'Edit', edit_paper_path(paper) %>
   <%= link_to 'Destroy', paper_path(paper), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
 
